@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder":"@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/angulardemo",
             "index": "src/index.html",
@@ -22,12 +22,26 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/theme.less",
+              "src/styles.css",
+              
+    "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
-            "scripts": []
+            "scripts": [], "customWebpackConfig": {
+              "path": "./webpack.config.js",
+               "mergeStrategies": {
+                 "module.rules": "append"
+               },
+               "replaceDuplicatePlugins": true
+             }
           },
           "configurations": {
             "production": {
@@ -92,7 +106,11 @@
             "scripts": []
           }
         }
+        
       }
     }
+  },
+  "cli": {
+    "analytics": "daffb06f-8960-4228-bf6a-18fbc39da8e5"
   }
 }

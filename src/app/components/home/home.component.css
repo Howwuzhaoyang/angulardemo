@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    background-color: khaki;
+}
+.main-left{
+  height: 100%; float: left; height: auto;
+} 
+.main-left-title {
+  height: 20px;font-size: 26px; margin-right: -40px;text-align: left;    margin-top: -15px;position: relative;z-index: 9999;
+}
+.main-left-describe{
+  height: 20px;font-size: 14px; margin-top: -14px; color: red;    text-align: left;
+}
+.look{
+  margin-top:20px;text-align: left; 
+}
+.look-button{
+  background: #db3664; border-radius:  0 40px 40px 0;     
+}
+.main-images{
+   flex: 1;    display: flex;
+}
+.main-images img{
+  margin-top: 79px;
+ 
+}
+.contents-images{
+  flex: 2;    line-height: 200px;
+}
+.content{
+    cursor: pointer;
+    max-width: 1300px;
+    height: 370px;
+    background-color: #cc1d41;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    margin:auto;
+    padding:15px;		
+}
+.contents-right{
+  display: flex; flex-wrap: wrap;overflow:hidden;  
+}
+.contents-sider{
+  flex: 1;  flex-wrap:wrap; height: 50%;
+}
+.contents-container{
+  display: flex;
+}
+.contents-main {
+  height: 100%; height: auto; flex: 4;
+}
+.contents-title{
+  height: 20px;font-size: 22px;margin-right: -50px;     text-align: left;   margin-top: -15px;position: relative;z-index: 9999;
+}
+.contents-describe{
+  height: 20px;font-size: 14px; margin-top: -14px;    text-align: left; color: red;
+}
+.main{
+    
+height: 100%;
+    background-color: #ffffff;
+    display: flex;
+}
+.tags1{
+    flex: 1;
+    background-color:red;
+}
+.tags2{
+    flex: 2;
+    background-color: blue;
+}   :host {
+    text-align: center;
+  }
+
+  nz-main-left,
+  nz-footer {
+    background: #7dbcea;
+    color: #fff;
+  }
+
+  nz-footer {
+    line-height: 1.5;
+  }
+
+  nz-sider {
+    background: #fff;
+    color: #000;
+    line-height: 120px;
+    padding-left: 8px;
+    border-right: 0.5px solid #bdbbbb;
+    border-bottom: 0.5px solid #bdbbbb;
+  }
+
+  nz-content {
+    background: rgba(16, 142, 233, 1);
+    color: #fff;
+    min-height: 120px;
+    /* border-right: 0.5px solid #bdbbbb; */
+    border-bottom: 0.5px solid #bdbbbb;
+    line-height: 120px;
+  }
+
+  nz-layout {
+    margin-bottom: 48px;
+  }
+
+  nz-layout nz-layout,
+  nz-layout:last-child {
+    margin: 0;
+  }
+  img{
+    /* opacity: 0.5; */background-size: cover;
+    transform: scale(1);
+  }
+  .imgdiv{
+    position: relative;
+    /* width: 300px;
+    height: 200px; */
+    overflow: hidden; 
+    /* opacity: 0; */
+  }
+  .imgdiv:hover{
+    opacity: 0;
+  }
+  img:hover {
+ 
+    transform: translateX(-10px);
+    }
+    .ant-layout-sider-children{
+        width: 100%;
+    }
+    .last-of-type{
+		border-bottom: none;
+	}
+  
+    

@@ -1,0 +1,61 @@
+<div class="content">
+    <div class="main">
+
+        <nz-layout>
+
+            <nz-layout style="flex: 1;display: flex;" >
+                <nz-sider  style="flex: 1;max-width: 400px;">
+                    <div class="main-left" *ngIf="tags[0].name">
+                        <p class="main-left-title">{{tags[0].name}}</p>
+                        <p class="main-left-describe">
+                            {{tags[0].describe}}</p>
+
+                        <div class="look" nz-popconfirm nzPopconfirmTitle="是否要删除该图片?" nzPopconfirmPlacement="bottom"
+                            (nzOnConfirm)="confirm(0)" (nzOnCancel)="cancel(0)"> <button nz-button class="look-button"
+                                nzType="primary" nzValue="small" nzShape="round">
+
+                                进入查看 <span nz-icon nzType="right"></span>
+                            </button></div>
+
+                    </div>
+                    <div class="main-images" > <img style="flex: 1;" width="220px" height="260px" [src]="tags[0].url" alt="" />
+                    </div>
+                </nz-sider>
+                <nz-layout style="flex: 2">
+                    <nz-content class="contents-right">
+                        <nz-sider [ngClass]="{'last-of-type':item.id>3}" nzWidth="33.33%" class="contents-sider"
+                            *ngFor="let item of tags| slice:1:7;index as index">
+                            <div class="contents-container">
+                                <div class="contents-main ">
+                                    <!-- <div> -->
+                                    <p class="contents-title">
+                                        {{item.name}}</p>
+                                    <!-- </div> -->
+
+                                    <p class="contents-describe">
+                                        ¥&nbsp;{{item.describe}}</p>
+
+                                    <div class="look" nz-popconfirm nzPopconfirmTitle="是否要删除该图片?"
+                                        nzPopconfirmPlacement="bottom" (nzOnConfirm)="confirm(index)"
+                                        (nzOnCancel)="cancel(index)"> <button class="look-button" nz-button
+                                            nzType="primary" nzValue="small" nzShape="round">
+
+                                            进入查看 <span nz-icon nzType="right"></span>
+                                        </button></div>
+
+                                </div>
+                                <div class="contents-images">
+                                    <img width="150px" height="130px" [src]="item.url" alt="" />
+                                </div>
+                            </div>
+
+                        </nz-sider>
+                    </nz-content>
+                </nz-layout>
+            </nz-layout>
+
+
+
+        </nz-layout>
+    </div>
+</div>
